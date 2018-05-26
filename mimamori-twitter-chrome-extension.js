@@ -8,6 +8,7 @@ var timeclose = 86400;
 var timer1;
 
 var stg_key;
+var save_timing = 0;
 
 $(function () {
     
@@ -82,9 +83,15 @@ function timer_count() {
       var value = {};
       value[stg_key] = now_time;
       
-       chrome.storage.sync.set(value, function() {
+      if ( save_timing == 0 ) {
+       	chrome.storage.sync.set(value, function() {
     
-  });
+  		});
+  	  }
+  	  save_timing++;
+  	  if(save_timing>=2){
+  	  	save_timing = 0;
+  	  }	
       //localStorage.setItem(stg_key, now_time);
       
       
