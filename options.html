@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Chrome Extension Options</title>
+  <style>
+    body: { padding: 10px; }
+  </style>
+</head>
+ 
+<body>
+ 
+  1日に利用できる時間:
+  <select id="timeclose">
+   <option value="600">10分(天才)</option>
+   <option value="3600">1時間(意識高い)</option>
+   <option value="7200">2時間(まあまだいいわ)</option>
+   <option value="10800">3時間(甘えてない？)</option>   
+   <option value="18000">5時間(こんなん制限ないに等しいぞ)</option>   
+   <option value="36000">10時間(ふざけんな)</option>   
+   <option value="86400">24時間(失望した)</option>   
+  </select>
+ 
+  　 
+  　<button id="save">保存</button>
+  
+  <div id="status"></div>
+ 
+ 
+  <script src="options.js"></script>
+</body>
+</html>
